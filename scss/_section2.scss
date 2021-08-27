@@ -1,0 +1,111 @@
+.section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__title {
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+    > h1 {
+      color: $DarkViolet;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+
+    > div {
+      width: 90%;
+      margin: 50px auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      height: 200px;
+
+      > h1 {
+        color: $DarkViolet;
+      }
+
+      > p {
+        color: $DarkGrayishViolet;
+      }
+    }
+  }
+
+  &__last-tab {
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+    height: 400px;
+    background-color: $DarkViolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+
+    img {
+      width: 40%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: block;
+    }
+
+    > h2 {
+      color: $VeryLightGray;
+      font-size: 40px;
+    }
+
+    .btn {
+      padding: 7px 28px;
+      border: 1px solid $VeryLightGray;
+      color: $VeryLightGray;
+      transition: color 0.4s ease-in-out;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $VeryLightGray;
+        color: $DarkViolet;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .section2 {
+    align-items: center;
+
+    &__title {
+      text-align: left;
+      width: 90%;
+      > h1 {
+        margin-left: 20px;
+        font-size: 40px;
+      }
+    }
+
+    &__tabs {
+      flex-direction: row;
+      width: 90%;
+
+      > div {
+        align-items: flex-start;
+        text-align: left;
+        height: 265px;
+
+        > p {
+          width: 80%;
+          line-height: 30.7px;
+        }
+      }
+    }
+  }
+}
